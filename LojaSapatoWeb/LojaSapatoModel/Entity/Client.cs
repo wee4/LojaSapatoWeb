@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace LojaSapatoModel.Entity
 {
-    class Client : GenericModelImpl
+    class Client : ModelRepository<Client>
     {
-        public String nome;
-        public String cpf;
-        public int idade;
+        private String nome;
+        private String cpf;
+        private int idade;
+       
+        public string Nome { get => nome; set => nome = value; }
+        public string Cpf { get => cpf; set => cpf = value; }
+        public int Idade { get => idade; set => idade = value; }
     }
 }
